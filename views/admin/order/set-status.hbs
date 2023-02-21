@@ -1,0 +1,17 @@
+<main class='app-content'>
+    <form action='/admin/order/{{order._id}}?_method=PUT' method="POST">
+        <div class='row'>
+
+            <div class='form-group col-md-3'>
+                <label class='control-label'>Trạng thái hiện tại : {{order.status}}</label>
+                <select name="status" class='form-control' id='exampleSelect1'>
+                    <option value='Chưa xử lý'>Chưa xử lý</option>
+                    <option value='Đang xử lý'>Đang xử lý</option>
+                    <option value='Đã xử lý'>Đã xử lý</option>
+                    <option value='Hủy'>Hủy</option>
+                </select>
+            </div>
+        </div>
+        <button class='btn btn-save' type='submit'>Lưu lại</button>
+    </form>
+</main>

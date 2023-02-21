@@ -1,0 +1,42 @@
+<main class='app-content'>
+    <div class='app-title'>
+        <ul class='app-breadcrumb breadcrumb side'>
+            <li class='breadcrumb-item active'><a href='#'><b>Chi tiết đơn hàng</b></a></li>
+        </ul>
+        <div id='clock'></div>
+    </div>
+    <div class='row'>
+        <div class='col-md-12'>
+            <div class='tile'>
+                <div class='tile-body'>
+                    <table
+                        class='table table-hover table-bordered'
+                        id='sampleTable'
+                    >
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Sản phẩm</th>
+                                <th>Ảnh</th>
+                                <th>Số lượng</th>
+                                <th>Giá tiền</th>
+                            </tr>
+                        </thead>
+                        
+                        <tbody>
+                            {{#each orderItems}}
+                                <tr>
+                                    <td>{{@index}}</td>
+                                    <td>{{this.product.name}}</td>
+                                    <td><img src="/uploads/{{this.product.image}}" width="100px" height="120px"></td>
+                                    <td>{{this.quantity}}</td>
+                                    <td>{{this.product.price}}</td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

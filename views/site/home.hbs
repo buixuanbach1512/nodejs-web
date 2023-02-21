@@ -1,0 +1,177 @@
+<!-- SLIDER SECTION -->
+<div class='section'>
+    <!-- container -->
+    <div class='container'>
+        <!-- row -->
+        <div class='row'>
+            <div class='col-md-12'>
+                <div class='slider'>
+                    <div id="slideshow">
+                        <div class="slide-wrapper">
+                            <div class="slide"><img src='/site/img/slide1.png' width='100%' height="500px" alt='' /></div>
+                            <div class="slide"><img src='/site/img/slide2.png' width='100%' height="500px" alt='' /></div>
+                            <div class="slide"><img src='/site/img/slide3.png' width='100%' height="500px" alt='' /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- SLIDER SECTION -->
+
+<!-- SECTION -->
+<div class='section'>
+    <!-- container -->
+    <div class='container'>
+        <!-- row -->
+        <div class='row'>
+
+            <!-- section title -->
+            <div class='col-md-12'>
+                <div class='section-title'>
+                    <h3 class='title'>Sảm phẩm nổi bật</h3>
+                </div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Products tab & slick -->
+            <div class='col-md-12'>
+                <div class='row'>
+                    <div class='products-tabs'>
+                        <!-- tab -->
+                        <div id='tab1' class='tab-pane active'>
+                            <div class='products-slick' data-nav='#slick-nav-1'>
+                                {{#each pro_Featured}}
+                                    <!-- product -->
+                                    <div class='product'>
+                                        <div class='product-img'>
+                                            <img
+                                                src='/uploads/{{this.image}}'
+                                                alt=''
+                                            />
+                                        </div>
+                                        <div class='product-body'>
+                                            <h3 class='product-name'><a
+                                                    href='/products/detail/{{this._id}}'
+                                                >{{this.name}}</a></h3>
+                                            <h4
+                                                class='product-price'
+                                            >{{this.price}}<sup>đ</sup></h4>
+                                            <div class='product-btns'>
+                                                <form
+                                                    action='/cart/add/{{this._id}}'
+                                                    method='GET'
+                                                >
+
+                                                    <button
+                                                        class='btn btn-dark'
+                                                    ><i
+                                                            class='fa fa-shopping-cart'
+                                                        ></i><span
+                                                            class='tooltipp'
+                                                        >
+                                                            Thêm giỏ hàng</span></button>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+                                {{/each}}
+                            </div>
+                            <div
+                                id='slick-nav-1'
+                                class='products-slick-nav'
+                            ></div>
+                        </div>
+                        <!-- /tab -->
+                    </div>
+                </div>
+            </div>
+            <!-- Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->
+
+<!-- SECTION -->
+<div class='section'>
+    <!-- container -->
+    <div class='container'>
+        <!-- row -->
+        <div class='row'>
+
+            <!-- section title -->
+            <div class='col-md-12'>
+                <div class='section-title'>
+                    <h3 class='title'>Sảm phẩm mới nhất</h3>
+                </div>
+            </div>
+            <!-- /section title -->
+
+            <!-- Products tab & slick -->
+            <div class='col-md-12'>
+                <div class='row'>
+                    <div class='products-tabs'>
+                        <!-- tab -->
+                        <div id='tab1' class='tab-pane active'>
+                            <div class='products-slick' data-nav='#slick-nav-2'>
+                                {{#each product}}
+                                    <!-- product -->
+                                    <div class='product'>
+                                        <div class='product-img'>
+                                            <img
+                                                src='uploads/{{this.image}}'
+                                                alt=''
+                                            />
+                                        </div>
+                                        <div class='product-body'>
+                                            <h3 class='product-name'><a
+                                                    href='/products/detail/{{this._id}}'
+                                                >{{this.name}}</a></h3>
+                                            <h4
+                                                class='product-price'
+                                            >{{this.price}}<sup>đ</sup></h4>
+                                            <div class='product-btns'>
+                                                <form
+                                                    action='/cart/add/{{this._id}}'
+                                                    method='GET'
+                                                >
+
+                                                    <button
+                                                        class='btn btn-dark'
+                                                    ><i
+                                                            class='fa fa-shopping-cart'
+                                                        ></i><span
+                                                            class='tooltipp'
+                                                        >
+                                                            Thêm giỏ hàng</span></button>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- /product -->
+                                {{/each}}
+                            </div>
+                            <div
+                                id='slick-nav-2'
+                                class='products-slick-nav'
+                            ></div>
+                        </div>
+                        <!-- /tab -->
+                    </div>
+                </div>
+            </div>
+            <!-- Products tab & slick -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->

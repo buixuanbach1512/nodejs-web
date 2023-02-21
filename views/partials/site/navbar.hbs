@@ -1,0 +1,20 @@
+<!-- NAVIGATION -->
+    <nav id="navigation">
+        <!-- container -->
+        <div class="container">
+            <!-- responsive-nav -->
+            <div id="responsive-nav">
+                <!-- NAV -->
+                <ul class="main-nav nav navbar-nav">
+                    <li class="active"><a href="/">Home</a></li>
+                    {{#each categories}}
+                    <li><a href="/products/{{this._id}}">{{this.name}}</a></li>
+                    {{/each}}
+                </ul>
+                <!-- /NAV -->
+            </div>
+            <!-- /responsive-nav -->
+        </div>
+        <!-- /container -->
+    </nav>
+<!-- /NAVIGATION -->

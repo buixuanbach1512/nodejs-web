@@ -1,0 +1,74 @@
+<main class='app-content'>
+    <div class='app-title'>
+        <ul class='app-breadcrumb breadcrumb side'>
+            <li class='breadcrumb-item active'><a href='#'><b>Danh sách sản phẩm</b></a></li>
+        </ul>
+        <div id='clock'></div>
+    </div>
+    <div class='row'>
+        <div class='col-md-12'>
+            <div class='tile'>
+                <div class='tile-body'>
+                    <div class='row element-button'>
+                        <div class='col-sm-2'>
+                            <a
+                                class='btn btn-add btn-sm'
+                                href='/admin/products/create'
+                                title='Thêm'
+                            ><i class='fas fa-plus'></i>
+                                Tạo mới sản phẩm</a>
+                        </div>
+                    </div>
+                    <table
+                        class='table table-hover table-bordered'
+                        id='sampleTable'
+                    >
+                        <thead>
+                            <tr>
+                                <th>STT</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Ảnh</th>
+                                <th>Số lượng</th>
+                                <th>Giá tiền</th>
+                                <th>Thương hiệu</th>
+                                <th>Màu sắc</th>
+                                <th>Danh mục</th>
+                                <th>Chức năng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{#each products}}
+                                <tr>
+                                    <td>{{@index}}</td>
+                                    <td>{{this.name}}</td>
+                                    <td><img
+                                            src='/uploads/{{this.image}}'
+                                            alt=''
+                                            width='100px;'
+                                        /></td>
+                                    <td>{{this.quantity}}</td>
+                                    <td>{{this.price}}</td>
+                                    <td>{{this.brand}}</td>
+                                    <td>{{this.color}}</td>
+                                    <td>{{this.category.name}}</td>
+                                    <td><a
+                                            class='btn btn-primary btn-sm trash'
+                                            onclick="return confirm('Bạn có chắc muốn xóa sản phẩm  này?')"
+                                            \
+                                            href='/admin/products/{{this._id}}/delete'
+                                        ><i class='fas fa-trash-alt'></i>
+                                        </a>
+                                        <a
+                                            class='btn btn-primary btn-sm edit'
+                                            href='/admin/products/{{this._id}}/update'
+                                        ><i class='fas fa-edit'></i></a>
+                                    </td>
+                                </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

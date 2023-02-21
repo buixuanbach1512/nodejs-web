@@ -1,0 +1,82 @@
+<!-- BREADCRUMB -->
+<div id='breadcrumb' class='section'>
+    <!-- container -->
+    <div class='container'>
+        <!-- row -->
+        <div class='row'>
+            <div class='col-md-12'>
+                <ul class='breadcrumb-tree'>
+                    <li><a href='/'>Home</a></li>
+                    <li><a
+                            href='/products/{{product.category._id}}'
+                        >{{product.category.name}}</a></li>
+                    <li><a href='#'>{{product.name}}</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /BREADCRUMB -->
+
+<!-- SECTION -->
+<div class='section'>
+    <!-- container -->
+    <div class='container'>
+        <!-- row -->
+        <div class='row'>
+            <!-- Product main img -->
+            <div class='col-md-5'>
+                <div id='product-main-img'>
+                    <div class='product-preview'>
+                        <img src='/uploads/{{product.image}}' alt='' />
+                    </div>
+
+                </div>
+            </div>
+            <!-- /Product main img -->
+            <!-- Product details -->
+            <div class='col-md-7'>
+                <div class='product-details'>
+                    <h2 class='product-name'>{{product.name}}</h2>
+
+                    <div>
+                        <h3 class='product-price'>{{product.price}}<sup
+                            >đ</sup></h3>
+                    </div>
+                    <p>{{product.description}}</p>
+
+                    <div class='product-options'>
+                        <label>
+                            Color :
+                            {{product.color}}
+                        </label>
+                    </div>
+
+                    <div class='add-to-cart'>
+                        <form action='/cart/add/{{product._id}}' method='GET'>
+
+                            <button class='add-to-cart-btn'><i
+                                    class='fa fa-shopping-cart'
+                                ></i><span class='tooltipp'>
+                                    Thêm vào giỏ hàng</span></button>
+
+                        </form>
+
+                    </div>
+
+                    <ul class='product-links'>
+                        <li>Danh mục : </li>
+                        <li><a href='/products/{{product.category._id}}'>{{product.category.name}}</a></li>
+                    </ul>
+
+                </div>
+            </div>
+            <!-- /Product details -->
+        </div>
+        <!-- /row -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /SECTION -->

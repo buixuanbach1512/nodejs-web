@@ -1,0 +1,93 @@
+<!-- HEADER -->
+<header>
+    <!-- TOP HEADER -->
+    <div id='top-header'>
+        <div class='container'>
+            <ul class='header-links pull-left'>
+                <li><a href='#'><i class='fa fa-phone'></i>
+                        +84 981736892</a></li>
+                <li><a href='#'><i class='fa fa-envelope-o'></i>
+                        buixuanbach102@gmail.com</a></li>
+            </ul>
+            <ul class='header-links pull-right'>
+                {{#if name}}
+                    <li><a href='#'><i
+                                class='fa fa-user-o'
+                            ></i>{{name}}</a></li>
+                    <li><a href='/me/logout'>
+                            Đăng xuất</a></li>
+                {{else}}
+                    <li><a href='/me/login'><i class='fa fa-user-o'></i>
+                            Đăng nhập</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+    <!-- /TOP HEADER -->
+
+    <!-- MAIN HEADER -->
+    <div id='header'>
+        <!-- container -->
+        <div class='container'>
+            <!-- row -->
+            <div class='row'>
+                <!-- LOGO -->
+                <div class='col-md-3'>
+                    <div class='header-logo'>
+                        <a href='/' class='logo'>
+                            <h1>B-Shop</h1>
+                        </a>
+                    </div>
+                </div>
+                <!-- /LOGO -->
+
+                <!-- SEARCH BAR -->
+                <div class='col-md-6'>
+                    <div class='header-search'>
+                        <form action="/s1/" method="GET">
+                            <select class='input-select'>
+                            </select>
+                            <input class='input' name="search" placeholder='Nhập ...' />
+                            <button class='search-btn'>Tìm kiếm</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- /SEARCH BAR -->
+
+                <!-- ACCOUNT -->
+                <div class='col-md-3 clearfix'>
+                    <div class='header-ctn'>
+                        <!-- Cart -->
+                        <div class='dropdown'>
+                            <a href='/cart'>
+                                <i class='fa fa-shopping-cart'></i>
+                                <span>Giỏ hàng</span>
+                                <div class='qty'>
+                                    {{#if session.cart.totalItems}}
+                                        {{session.cart.totalItems}}
+                                    {{else}}
+                                        0
+                                    {{/if}}</div>
+                            </a>
+                        </div>
+                        <!-- /Cart -->
+
+                        <!-- Menu Toogle -->
+                        <div class='menu-toggle'>
+                            <a href='#'>
+                                <i class='fa fa-bars'></i>
+                                <span>Menu</span>
+                            </a>
+                        </div>
+                        <!-- /Menu Toogle -->
+                    </div>
+                </div>
+                <!-- /ACCOUNT -->
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- /MAIN HEADER -->
+</header>
+<!-- /HEADER -->
